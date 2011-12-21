@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.rubyforge_project = '[none]'
 
-  s.add_dependency             'activerecord', '~> 3.0.3'
+  s.add_dependency             'activerecord', '~> 3.0'
   s.add_dependency             'gem_patching'
 
   s.add_development_dependency 'test_declarative'
@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'sqlite3-ruby'
   s.add_development_dependency 'pg', '0.9.0'
-  s.add_development_dependency 'mysql2', '0.2.6'
+  s.add_development_dependency 'mysql2', '~> 0.3'
 
   s.add_development_dependency 'database_cleaner', '0.6.0'
 end
