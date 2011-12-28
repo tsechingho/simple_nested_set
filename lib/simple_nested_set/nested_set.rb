@@ -2,7 +2,7 @@ module SimpleNestedSet
   class NestedSet < ActiveRecord::Relation
     include SqlAbstraction
 
-    class_inheritable_accessor :node_class, :scope_names, :move_after_save
+    class_attribute :node_class, :scope_names, :move_after_save
 
     class << self
       def build_class(model, scopes)

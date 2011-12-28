@@ -20,7 +20,7 @@ module SimpleNestedSet
 
       default_scope :order => :lft
 
-      class_inheritable_accessor :nested_set_class
+      class_attribute :nested_set_class
       self.nested_set_class = NestedSet.build_class(self, options[:scope])
     end
 
