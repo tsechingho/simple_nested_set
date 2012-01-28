@@ -101,7 +101,11 @@ when /^2\.0\.[5-9]$/, /^2\.1\.[01]$/, '2.0.10' # successfully tested, could be '
   Gem.patching('arel', Arel::VERSION) do
     Arel::Table.send :include, SimpleNestedSetPatchArel2
   end
-else
+when '2.0.10'
+  Gem.patching('arel', '2.0.10') do
+    Arel::Table.send :include, SimpleNestedSetPatchArel2
+  end
+when '2.2.1'
   # latest tested version to enable Gem-patching-Exceptions
   # This can be removed once we cover all versions which need this patch
   Gem.patching('arel', '2.2.1') do
